@@ -1,0 +1,368 @@
+/**
+ * Exemple de template HTML5/CSS3
+ * Aventure Videoludiques
+ * (c) 2012 Frédéric Delorme<frederic.delorme@gmail.com>
+ */
+ 
+@font-face{
+	font-family:"GlassAntiqua";
+	src: url("fonts/GlassAntiqua-Regular.ttf");
+}
+@font-face{
+	font-family:"HennyPenny";
+	src: url("./fonts/HennyPenny-Regular.ttf");
+}
+html * { 
+	padding:0px;
+	margin:0px;
+}
+body {
+	display:block;
+	margin:0% 10%;
+	box-shadow:#000 2px 2px 12px;	
+	font-family: Tahoma, Verdana, Sans Serif;
+	font-size:12pt;
+	min-width:900px;
+}	
+body header{
+	background-color:#000;
+	color:#fff;
+	padding:0px 10px;
+	margin:0px;
+	background-image:url('../images/background/ws_City_Night_View_1600x1200.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+body header h1,body header h2{
+	font-family:"HennyPenny";
+	padding:10px;
+	text-shadow:#fff 0px 0px 8px,
+				#000 0px 0px 16px;
+	color:#FF8;
+	font-weight:bold;
+}
+body header h1{
+	font-size:24pt;
+	padding:10px 10px 5px 10px;
+}
+body header h2{
+	font-size:18pt;
+	padding:10px 10px 5px 10px;
+	}
+
+/*----- Barre de navigation principale -----*/
+nav#bar {
+	border-radius:8px 8px 0px 0px;
+	background-color:rgba(0,0,0,0.7);
+	color:#fff;
+}
+nav#bar ul {
+	display:block;
+	list-style:none;
+	margin:0px;
+	border-bottom:1px solid #000;
+}
+nav#bar ul li {
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+}
+nav#bar ul li a{
+	display:block;
+	border:0px;
+	padding:10px 20px;
+	margin:0px;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+}
+nav#bar ul li:hover a{
+	color:#eee;
+	/*background-color:#666;*/
+	background-color:rgba(255, 255, 255, 0.6);
+	box-shadow: #000 4px 4px 8px inset,
+				#000 -1px -1px 2px inset;
+	text-shadow: #000 0px 0px 4px;
+}
+nav#bar ul li:first-child a{
+	border-radius:8px 0px 0px 0px;
+	border-left:none;
+}
+/*nav#bar ul li:last-child a{
+	border-radius:0px 8px 0px 0px;
+	border-left:none;
+}*/
+nav#bar ul.actions a.button{
+	border:0px;
+	border-radius: 4px;
+	
+}
+/*---- barre ramasse miettes -----*/
+.crumbbar {
+	display:block;
+	padding:5px 10px ;
+	background-color:#ddd;
+}
+.crumbbar,.crumbbar a {
+	font-size:9pt;
+}
+.crumbbar a {
+	text-decoration:none;
+	border-bottom:1px dotted #06f;
+	color:#3af;
+}
+/*----- Side bar -----*/
+aside#details{
+	float:right;
+	width:290px;
+	text-align:left;
+	padding:10px 0px;
+}
+aside#details h1{
+	display:block;
+	font-family:GlassAntiqua;
+	margin:0px;
+	padding-bottom:10px;
+	border-bottom:1px dotted #999;
+	margin-bottom:20px;
+	font-size:20pt;
+}
+aside#details video{
+	border:1px outset #999;
+	border-radius:4px;
+	padding:6px;
+}
+/*----- Section principale des pages -----*/
+section#main{
+	padding:10px 0px;
+	padding-right:300px;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+/*----- Affichage d'un article -----*/
+article.post {
+	font-size: 10pt;
+	margin:0px 10px 10px 10px;
+}
+article.post h1{
+	font-family: GlassAntiqua;
+	display:block;
+	font-family:GlassAntiqua;
+	margin:0px;
+	padding-bottom:10px;
+	border-bottom:1px dotted #999;
+	margin-bottom:20px;
+	font-size:24pt;
+}
+article.post h1 span{
+	font-size:8pt;
+	font-weight:normal;
+	padding:0px 4px 10px 0px;
+}
+article.post h1 a{
+	color:#fff;
+	text-decoration:none;
+	text-shadow:#000 2px 2px 6px;	
+}
+article.post h1:hover a{
+	color:#999;
+}
+article.post header {
+	background-color:#666;
+	background-image:none;
+	margin:0px 0px 20px 0px;
+	padding:10px 20px;
+	border-radius:8px;
+	box-shadow:#666 2px 2px 8px;
+	color:#fff;
+}
+article.post .content{
+	display:block;
+	padding:0px;
+	text-align:justify;
+}
+article.post .content p{
+	padding:4pt 2pt;
+}
+article.post img.photo{
+	border:1px solid #fff;
+	padding:2px;
+	box-shadow:#000 2px 2px 6px;
+}
+article.post footer a img.avatar{
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	padding:1px;
+	border:2px solid #B21;
+	margin-right:4px;
+	border-radius:4px;
+}
+article.post footer {
+ 	text-align:right;
+ 	border-top:1px dotted #666;
+ 	padding-top:10px;
+ 	margin-top:10px;
+ 	background-image:none;
+ 	text-shadow:none;
+ 	font-weight:normal;
+}
+article.post footer a{
+	text-decoration:none;
+	color:#444;
+	text-shadow: #222 1px 1px 3px; 
+}
+article.post footer a.permalink{
+	float:left;
+	font-size:9pt;
+	text-decoration:none;
+	color:#bbb;
+	text-shadow:none;
+}
+.clear{
+	clear:both;
+}
+.left{
+	float:left;
+	margin:6px 16px 8px 0px;
+}
+.right{
+	float:right;
+	margin:6px 0px 8px 16px;
+	margin-left:15px;
+}
+.center{
+	text-align:center;
+}
+/*----- Galerie d'images -----*/
+.gallery{
+	text-align:center;
+	width:90%;
+	margin:0% 5%;
+}
+.screenshots{
+	width:550px;
+}
+article.post .gallery .screenshots figure.screenshot{
+	display:inline-block;
+	float:left;
+	position:relative;
+	border:4px solid #fff;
+	box-shadow:#000 2px 2px 6px;
+	border-radius:4px;
+	margin:3px;
+	overflow:hidden;
+}
+article.post .gallery .screenshots figure.screenshot img{
+	background-clip:border-box;
+	display:block;
+}
+.medium{
+	width:100px;
+	/*height:54px;*/
+}
+.big{
+	width:350px;
+	/*height:230px;*/
+}
+.small{
+	width:40px;
+}
+
+figure.screenshot figcaption{
+	display:block;
+	position:absolute;
+	font-size:6pt;
+	background-color:rgba(100,100,100,0.2);
+	bottom: -50px;
+	color:#fff;
+	padding:10px 0px;
+	width:100%;
+	-moz-transition: bottom .5s;
+	-webkit-transition: bottom .5s;
+	-o-transition: bottom .5s;
+	transition: bottom .5s;
+}
+figure.screenshot img {
+	width:100%;
+}
+figure.screenshot:hover figcaption{
+	bottom:0px;
+}
+/*---- any figure with an image -----*/
+a {
+	text-decoration:none;
+}
+figure.caption{
+	display:inline-block;
+	position:relative;
+	border:4px solid #fff;
+	box-shadow:#000 2px 2px 6px;
+	border-radius:4px;
+	margin:3px;
+	overflow:hidden;
+	/*padding:4px;*/
+	margin:6px 10px 8px 0px;
+}
+figure.caption img{
+	background-clip:border-box;
+	display:block;
+}
+figure.caption figcaption{
+	display:block;
+	position:absolute;
+	font-size:6pt;
+	background-color:rgba(100,100,100,0.8);
+	bottom: -50px;
+	color:#fff;
+	width:100%;
+	-moz-transition: bottom .5s;
+	-webkit-transition: bottom .5s;
+	-o-transition: bottom .5s;
+	transition: bottom .5s;
+	text-align:center;
+	padding:2px;
+}
+figure.caption img {
+	width:100%;
+}
+figure.caption:hover figcaption{
+	bottom:0px;
+}
+/*----- Pied de pages -----*/
+footer{
+	padding:0px;
+	padding-top:20px;
+	margin-top:10px;
+	background-image:url('../images/background/ws_City_Night_View_1600x1200.jpg');
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+footer p {
+	display:block;
+	font-size:10pt;
+	text-align:center;	
+	font-weight:bold;
+}
+footer p.copy{
+	color:#fff;
+	text-shadow:#fff 0px 0px 4px,
+				#000 1px 1px 6px;	
+}
+footer p.legal{
+	background-color:#000;
+	background-image:none;
+}
+footer p.legal li {
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+	
+footer a{
+	color:#fff;
+	text-decoration: none;
+	border-bottom:1px dotted #999;
+}
